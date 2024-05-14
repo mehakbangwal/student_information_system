@@ -29,6 +29,9 @@
         width: 80%;
         background-color: #e0e0e0;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Ensure space between content and logout button */
     }
 
     ul {
@@ -51,6 +54,23 @@
         color: inherit;
         display: block;
     }
+
+    .logout-button {
+        background-color: #ff4b5c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        align-self: flex-end; /* Align the button to the bottom-right corner */
+        margin-top: 20px;
+    }
+
+    .logout-button:hover {
+        background-color: #ff1f3a;
+    }
 </style>
 </head>
 <body>
@@ -64,8 +84,22 @@
     </div>
     <div class="right-panel">
         <h1>Welcome Student!</h1>
-        
+
+        <button id="logoutButton" class="logout-button">Logout</button>
+    </div>
 </div>
+
+<script>
+document.getElementById('logoutButton').addEventListener('click', function() {
+    // Clear any authentication tokens, session data, etc.
+    // For example, you might clear a JWT token from local storage:
+    localStorage.removeItem('authToken');
+    
+    // Redirect the user to the logout endpoint or login page
+    window.location.href = '/logout'; // Change '/logout' to your actual logout URL or login page
+});
+</script>
 
 </body>
 </html>
+
