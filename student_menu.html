@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Page</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    .left-panel {
+        width: 20%;
+        background-color: #b991b8;
+        overflow-y: auto; /* Enable scrolling if the content exceeds the height */
+    }
+
+    .right-panel {
+        width: 80%;
+        background-color: #e0e0e0;
+        padding: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #ccc;
+    }
+
+    li:hover {
+        background-color: #d6ccd6;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <ul>
+            <li><a href="view_result.html">View Result</a></li>
+            <li><a href="view_attendance.html">View Attendance</a></li>
+        </ul>
+    </div>
+    <div class="right-panel">
+        <h1>Welcome Student!</h1>
+        
+</div>
+
+</body>
+</html>
